@@ -3,14 +3,11 @@ export class Auto{
     private modelo: string;
     private anio: number;
 
-
-
 constructor( marca: string, modelo: string, anio:number ){
     this.marca= marca;
     this.modelo= modelo;
     this.anio= anio; 
 }
-
 getMarca(): string{
     return this.marca;
 }
