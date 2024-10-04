@@ -13,18 +13,9 @@ export class RegistroAutomotor {
    public obtenerVehiculos(): (Auto | Moto | Camion)[] {
         return this.vehiculos;
     }
-
-    //modificarVehiculo(i:number, modelo: string, anio: number): void {
-      // if (i >= 0 && i < this.vehiculos.length) {
-     //      const vehiculo = this.vehiculos[i];
-     //       vehiculo.setModelo(modelo);
-     //      vehiculo.setAnio(anio);
-     //  } else {
-    //       console.log("Índice no válido");
-    //   }
         
     public modificarVehiculoPorPatente(patente: number, modelo: string, anio: number): void {
-        const vehiculo = this.vehiculos.find(vehiculo => vehiculo.getPatente() === patente);
+        const vehiculo = this.vehiculos.find(vehiculo => vehiculo.getPatente() !== patente);
         
         if (vehiculo) {
             vehiculo.setModelo(modelo);
