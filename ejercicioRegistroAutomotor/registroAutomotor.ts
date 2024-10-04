@@ -15,7 +15,7 @@ export class RegistroAutomotor {
     }
         
     public modificarVehiculoPorPatente(patente: number, modelo: string, anio: number): void {
-        const vehiculo = this.vehiculos.find(vehiculo => vehiculo.getPatente() !== patente);
+        const vehiculo = this.vehiculos.find(vehiculo => vehiculo.getPatente() == patente);
         
         if (vehiculo) {
             vehiculo.setModelo(modelo);
