@@ -1,13 +1,16 @@
-export class Moto {
+import { Vehículo } from "./vehiculo";
+
+export class Moto extends Vehículo {
     private marca: string;
     private modelo: string;
     private anio: number;
-    private patente: number;
- constructor(marca: string, modelo: string, anio: number, patente: number) {
+    
+ 
+    constructor(marca: string, modelo: string, anio: number, ruedas:number, color:string, patente: number) {
+        super(ruedas, color, patente);
         this.marca = marca;
         this.modelo = modelo;
         this.anio = anio;
-        this.patente= patente;
     }
 
    public getMarca(): string {
@@ -22,10 +25,6 @@ export class Moto {
         return this.anio;
     }
 
-   public getPatente(): number{
-        return this.patente;
-    }
-
    public setModelo(modelo: string): void {
         this.modelo = modelo;
     }
@@ -34,7 +33,4 @@ export class Moto {
         this.anio = anio;
     }
 
-   public setPatente(patente: number): void{
-        this.patente= patente;
-    }
 }
