@@ -1,7 +1,7 @@
 import { Auto } from "./autos";
 import { Moto} from "./motos";
 import { Camion } from "./camiones";
-
+import { Vehículo } from "./vehiculo";
 
 export class RegistroAutomotor {
     private vehiculos: (Auto | Moto | Camion)[] = [];
@@ -27,8 +27,8 @@ export class RegistroAutomotor {
      
       
     
-   public darDeBaja(modelo: string): void{ 
-    this.vehiculos = this.vehiculos.filter(Moto => Moto.getModelo() !== modelo);
+   public darDeBaja(patente:number): void{ 
+    this.vehiculos = this.vehiculos.filter(Moto => Moto.getPatente() !== patente);
     }
 }
 
