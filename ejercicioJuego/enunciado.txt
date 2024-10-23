@@ -1,0 +1,3 @@
+Crear un sistema de personajes de un videojuego RPG utilizando herencia y polimorfismo
+los personajes treandran caracteristicas y habilidades unicas
+y algunos podran evolucionar a verciones mejoradas con nuevas habilidades.
