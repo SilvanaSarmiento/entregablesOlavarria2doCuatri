@@ -1,41 +1,41 @@
-export abstract class Personaje{
+export abstract class Personaje {
     protected nombre: string;
     protected nivel: number;
     protected puntosDeVida: number;
 
-    constructor (nombre: string, nivel: number, puntosDeVida:number){
-        this.nombre= nombre;
-        this.nivel= nivel;
-        this.puntosDeVida= puntosDeVida;
+    constructor(nombre: string, nivel: number, puntosDeVida: number) {
+        this.nombre = nombre;
+        this.nivel = nivel;
+        this.puntosDeVida = puntosDeVida;
     }
 
-    public getNombre(): string{
+    public getNombre(): string {
         return this.nombre
-    } 
+    }
 
-    public getNivel(): number{
+    public getNivel(): number {
         return this.nivel
     }
 
-    public getPuntosDeVida(): number{
+    public getPuntosDeVida(): number {
         return this.puntosDeVida
     }
 
-    public setpuntosDeVida(valor:number){
-        if (valor <0)
-        this.puntosDeVida= valor;
+    public setpuntosDeVida(valor: number) {
+        if (valor < 0)
+            this.puntosDeVida = valor;
     }
 
-  
-    atacar(): void {
+
+    public atacar(): void {
         console.log(`${this.nombre} ataca!`);
     }
 
-    defender(): void {
+    public defender(): void {
         console.log(`${this.nombre} se defiende!`);
     }
 
-    evolucionar(): void {
-        console.log(`${this.nombre} no puede evolucionar.`);
-    }   
+    public evolucionar(): void {
+
+    }
 }
