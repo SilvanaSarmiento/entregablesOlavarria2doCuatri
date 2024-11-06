@@ -26,7 +26,6 @@ export abstract class Personaje {
             this.puntosDeVida = valor;
     }
 
-
     public atacar(): void {
         console.log(`${this.nombre} ataca!`);
     }
@@ -35,7 +34,5 @@ export abstract class Personaje {
         console.log(`${this.nombre} se defiende!`);
     }
 
-    public evolucionar(): void {
-
-    }
+    abstract evolucionar(): void; 
 }
